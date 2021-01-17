@@ -8,7 +8,19 @@ import { render } from 'react-dom';
 
 const TabNavigator = createBottomTabNavigator({
   Transation:{screen:BookTran},
-  Search:{screen:SearchScreen}
+  Search:{screen:SearchScreen},
+},{
+  defaultNavigationOptions: ({navigation}) => {
+    tabBarIcon: ({})=>{
+      const routeName = navigation.state.routeName 
+      if(routeName === 'Transaction'){ 
+        return(<Image source= {require('./assets/book.png')} 
+        style={{width:30,height:30}}/>) 
+      } else if(routeName === 'Search'){ 
+        return(<Image source= {require('./assets/searchingbook.png')} 
+        style={{width:30,height:30}}/>) }
+    }
+  }
 });
 
 const AppContainer = createAppContainer(TabNavigator);

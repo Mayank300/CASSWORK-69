@@ -1,23 +1,43 @@
 import React from 'react'
-import {View, Text,StyleSheet} from 'react-native'
-import { render } from 'react-dom';
+import {View, Text, StyleSheet,TouchableOpacity, Image} from 'react-native'
+
 
 export default class BookTran extends React.Component{
     render(){
-        return(
-            <View style={styles.textStyle}>
-                <Text>HELLO WORLD</Text>
-            </View>
-        )
+      return(
+        <View>
+          <Text style={styles.displayText} > THIS IS TRANSCATION SCREEN </Text>
+        </View>
+      )
     }
-}
+  }
 
 const styles = StyleSheet.create({
-  textStyle:{
-    textAlign:'center',
-    textSize:20,
-    justifyContent:'center',
-    marginTop:100,
-    color:'orange',
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  displayText:{
+    fontSize: 40,
+    marginTop: 100,
+    marginLeft: 700,
+    width:500,
+    textAlign: 'center',
+    borderColor: 'black',
+    borderWidth: 5,
+    borderRadius : 12,
+  },
+  displayText2:{
+    fontSize: 30,
+    margin: 10,
+  },
+  scanButton:{
+    backgroundColor: '#2196F3',
+    padding: 10,
+    margin: 10
+  },
+  buttonText:{
+    fontSize: 30,
   }
-})
+});
